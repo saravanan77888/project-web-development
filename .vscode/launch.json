@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "url": "http://localhost:8080",
+            "url": "https://portfolio-l86edh7ka-saravanans-projects-ec8144a2.vercel.app/",
             "webRoot": "${workspaceFolder}"
         }
     ]
