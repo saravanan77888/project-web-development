@@ -1,3 +1,4 @@
+/* Base Reset and Global Styles */
 * {
   margin: 0;
   padding: 0;
@@ -87,7 +88,13 @@ nav ul li a:hover::after {
 .row {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   flex-wrap: wrap;
+  gap: 40px;
+}
+
+.about-col-1 {
+  flex-basis: 45%;
 }
 
 .about-col-1 img {
@@ -96,7 +103,7 @@ nav ul li a:hover::after {
 }
 
 .about-col-2 {
-  flex-basis: 45%;
+  flex-basis: 50%;
 }
 
 .sub-title {
