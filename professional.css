@@ -1,3 +1,4 @@
+/* Base Reset and Global Styles */
 * {
   margin: 0;
   padding: 0;
@@ -14,6 +15,7 @@ body {
   color: #fff;
 }
 
+/* Header Section */
 #header {
   width: 100%;
   height: 150vh;
@@ -79,6 +81,7 @@ nav ul li a:hover::after {
   color: #ff004f;
 }
 
+/* About Section */
 #about {
   padding: 80px 0;
   color: #ababab;
@@ -88,6 +91,13 @@ nav ul li a:hover::after {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+}
+
+.about-col-1 {
+  flex-basis: 45%;
+  min-width: 300px;
 }
 
 .about-col-1 img {
@@ -96,13 +106,15 @@ nav ul li a:hover::after {
 }
 
 .about-col-2 {
-  flex-basis: 45%;
+  flex-basis: 50%;
+  min-width: 300px;
 }
 
 .sub-title {
   font-size: 60px;
   font-weight: 600;
   color: #fff;
+  margin-bottom: 20px;
 }
 
 .tab-titles {
@@ -119,7 +131,7 @@ nav ul li a:hover::after {
 }
 
 .tab-links::after {
-  content: '';
+  content: ' ';
   width: 0;
   height: 3px;
   background: #ff004f;
@@ -133,6 +145,14 @@ nav ul li a:hover::after {
   width: 50%;
 }
 
+.tab-contents {
+  display: none;
+}
+
+.tab-contents.active-tab {
+  display: block;
+}
+
 .tab-contents ul li {
   list-style: none;
   margin: 10px 0;
@@ -143,15 +163,7 @@ nav ul li a:hover::after {
   font-size: 14px;
 }
 
-.tab-contents {
-  display: none;
-}
-
-.tab-contents.active-tab {
-  display: block;
-}
-
-/* --------- Services --------- */
+/* Services Section */
 #services {
   padding: 30px 0;
 }
@@ -196,7 +208,7 @@ nav ul li a:hover::after {
   transform: translateY(10px);
 }
 
-/* --------- Portfolio --------- */
+/* Portfolio Section */
 #portfolio {
   padding: 50px 0;
 }
@@ -282,7 +294,7 @@ nav ul li a:hover::after {
   background: #ff004f;
 }
 
-/* --------- Contact --------- */
+/* Contact Section */
 .contact-left {
   flex-basis: 35%;
 }
@@ -361,11 +373,7 @@ form .btn2 {
   color: #ff004f;
 }
 
-/* --------- Responsive (Mobile) --------- */
-nav .fas {
-  display: none;
-}
-
+/* Responsive Design */
 @media only screen and (max-width: 600px) {
   #header {
     background-image: url(images/phone-background.png);
@@ -402,24 +410,19 @@ nav .fas {
     margin: 25px;
   }
 
-  nav ul.fas {
-    position: absolute;
-    top: 25px;
-    left: 25px;
-    cursor: pointer;
-  }
-
   .sub-title {
     font-size: 40px;
   }
 
-  .about-col-1,
-  .about-col-2 {
-    flex-basis: 100%;
+  .row {
+    flex-direction: column;
   }
 
-  .about-col-1 {
-    margin-bottom: 30px;
+  .about-col-1,
+  .about-col-2,
+  .contact-left,
+  .contact-right {
+    flex-basis: 100%;
   }
 
   .about-col-2 {
@@ -429,11 +432,6 @@ nav .fas {
   .tab-links {
     font-size: 16px;
     margin-right: 20px;
-  }
-
-  .contact-left,
-  .contact-right {
-    flex-basis: 100%;
   }
 
   .copyright {
