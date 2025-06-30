@@ -391,6 +391,11 @@ form .btn2 {
   nav .fas {
     display: block;
     font-size: 25px;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    color: #fff;
+    cursor: pointer;
   }
 
   nav ul {
